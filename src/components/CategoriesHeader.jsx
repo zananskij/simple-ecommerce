@@ -22,8 +22,8 @@ function CategoriesHeader() {
             <Link to="all" onClick={() => handleBtnName("all")}>
               <button>All</button>
             </Link>
-            <Link to="furnitures">
-              <button onClick={() => handleBtnName("furnitures")}>Furnitures</button>
+            <Link to="storage">
+              <button onClick={() => handleBtnName("storage")}>Storage</button>
             </Link>
             <Link to="electronics">
               <button onClick={() => handleBtnName("electronics")}>Electronics</button>
@@ -36,9 +36,6 @@ function CategoriesHeader() {
             </Link>
             <Link to="chairs">
               <button onClick={() => handleBtnName("chairs")}>Chairs</button>
-            </Link>
-            <Link to="skin-care">
-              <button onClick={() => handleBtnName("skin care")}>Skin Care</button>
             </Link>
           </div>
         </div>

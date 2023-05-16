@@ -1,15 +1,15 @@
-import CategoriesItemSkinCare from "./CategoriesItemSkinCare"
+import CategoriesItemStorage from "./CategoriesItemStorage"
 import Footer from "../Footer"
 import Newsletter from "../Newsletter"
 
-function SkinCare() {
+function Storage() {
   return (
     <>
-      <CategoriesItemSkinCare />
+      <CategoriesItemStorage />
       <Newsletter />
       <Footer />
     </>
   )
 }
 
-export default SkinCare
+export default Storage

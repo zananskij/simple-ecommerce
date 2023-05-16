@@ -5,24 +5,24 @@ import Main3 from "../img/header/home-img-3.jpg"
 import Main4 from "../img/header/home-img-4.jpg"
 import { Link } from "react-router-dom"
 
-function Hero() {
+function Header() {
   return (
     <>
       <div className="home-container">
         <div className="container">
           <div className="grid-container">
             <div className="featured grid-one">
-              <Link to="categories/furnitures">
+              <Link to="categories/all">
                 <div id="img1" className="lil-overlay"></div>
                 <img src={Main1} alt="img1" />
                 <p className="main-description">Live Comfortably</p>
               </Link>
             </div>
             <div className="featured grid-two">
-              <Link to="categories/skin-care">
+              <Link to="categories/storage">
                 <div id="img2" className="lil-overlay"></div>
                 <img src={Main2} alt="img2" />
-                <p className="main-description">Skincare</p>
+                <p className="main-description">Storage</p>
               </Link>
             </div>
             <div className="featured grid-four">
@@ -46,4 +46,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Header

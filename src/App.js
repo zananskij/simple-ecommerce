@@ -3,12 +3,12 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Categories from "./pages/Categories"
 import All from "./components/Categories-pages/All"
-import Furnitures from "./components/Categories-pages/Furnitures"
+import Storage from "./components/Categories-pages/Storage"
 import Electronics from "./components/Categories-pages/Electronics"
 import Lamps from "./components/Categories-pages/Lamps"
 import Kitchen from "./components/Categories-pages/Kitchen"
 import Chairs from "./components/Categories-pages/Chairs"
-import SkinCare from "./components/Categories-pages/SkinCare"
+// import SkinCare from "./components/Categories-pages/SkinCare"
 import ProductPage, { CartContext } from "./pages/ProductPage"
 import { useEffect, useState } from "react"
 
@@ -41,12 +41,11 @@ function App() {
 
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
-          <Route path="furnitures" element={<Furnitures />} />
+          <Route path="storage" element={<Storage />} />
           <Route path="electronics" element={<Electronics />} />
           <Route path="lamps" element={<Lamps />} />
           <Route path="kitchen" element={<Kitchen />} />
           <Route path="chairs" element={<Chairs />} />
-          <Route path="skin-care" element={<SkinCare />} />
         </Route>
         <Route path="categories/product/:id" element={<ProductPage />} />
       </Routes>
