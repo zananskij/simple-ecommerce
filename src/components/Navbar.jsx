@@ -1,6 +1,8 @@
 import "./Navbar.css"
 
-import LogoImg2 from "../img/newlogo2.png"
+// import LogoImg2 from "../img/newlogo2.png"
+import LogoImg2 from "../img/shopify-logo.png"
+
 import { Link } from "react-router-dom"
 import { useContext, useState } from "react"
 import CartWithItems from "./CartWithItems"
@@ -75,9 +77,9 @@ function Navbar() {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories/all">
                 categories
               </Link>
-              <Link onClick={() => window.scrollTo(0, 0)} to="/categories/product/19">
+              {/* <Link onClick={() => window.scrollTo(0, 0)} to="/categories/product/19">
                 product page
-              </Link>
+              </Link> */}
               <i
                 data-array-length={cartItem.length}
                 onClick={openCart}

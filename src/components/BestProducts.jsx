@@ -1,9 +1,9 @@
 import ProductItem from "./ProductItem"
-import "./ProudProducts.css"
-function ProudProducts() {
+import "./BestProducts.css"
+function BestProducts() {
   return (
-    <div className="proud-container">
-      <h2 className="container proud-h2">Best Selling </h2>
+    <div className="best-container">
+      <h2 className="container best-h2">Best Selling </h2>
       <div className="container">
         <div className="products-grid">
           <ProductItem />
@@ -13,4 +13,4 @@ function ProudProducts() {
   )
 }
 
-export default ProudProducts
+export default BestProducts

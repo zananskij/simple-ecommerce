@@ -1,4 +1,4 @@
-import "./ProudProducts.css"
+import "./BestProducts.css"
 import { items } from "./AllData"
 import { Link } from "react-router-dom"
 

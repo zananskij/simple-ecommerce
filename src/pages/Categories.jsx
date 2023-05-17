@@ -1,4 +1,4 @@
-import "../components/ProudProducts.css"
+import "../components/BestProducts.css"
 import CategoriesHeader from "../components/CategoriesHeader"
 import { Outlet } from "react-router"
 

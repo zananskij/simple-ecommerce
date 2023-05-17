@@ -29,7 +29,8 @@
 }
 
 .logo-img {
-  width: 8.5rem;
+  /* width: 8.5rem; */
+  width: 15rem;
   height: auto;
   cursor: pointer;
 }
@@ -118,6 +119,11 @@
 }
 
 /* cart */
+
+.fa-solid.fa-cart-shopping {
+  font-size: 24px;
+  color: black;
+}
 
 .cart-div {
   display: flex;

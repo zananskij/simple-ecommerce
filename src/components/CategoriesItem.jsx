@@ -4,7 +4,7 @@ import { items } from "./AllData"
 function CategoriesItem() {
   return (
     <>
-      <div className="proud-container">
+      <div className="best-container">
         <div className="container">
           <div className="products-grid">
             {items.map((item) => (

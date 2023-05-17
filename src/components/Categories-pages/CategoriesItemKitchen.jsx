@@ -5,7 +5,7 @@ function CategoriesItem() {
   const filteredItems = items.filter((item) => item.category === "kitchen")
   return (
     <>
-      <div className="proud-container">
+      <div className="best-container">
         <div className="container">
           <div className="products-grid">
             {filteredItems.map((item) => (
