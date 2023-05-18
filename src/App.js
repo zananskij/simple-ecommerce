@@ -8,11 +8,11 @@ import Electronics from "./components/Categories-pages/Electronics"
 import Lamps from "./components/Categories-pages/Lamps"
 import Kitchen from "./components/Categories-pages/Kitchen"
 import Chairs from "./components/Categories-pages/Chairs"
-// import SkinCare from "./components/Categories-pages/SkinCare"
 import ProductPage, { CartContext } from "./pages/ProductPage"
 import { useEffect, useState } from "react"
 
 function App() {
+  // cart
   const [cartItem, setCartItem] = useState([])
 
   const addToCart = (item) => {
@@ -27,13 +27,16 @@ function App() {
       setCartItem(savedCart)
     }
   }, [])
+  // dependency array is empty so this effect runs only once when loaded
 
+  // saving cart items to local storage whenever cartItem changes
   useEffect(() => {
     const json = JSON.stringify(cartItem)
     localStorage.setItem("cartItem", json)
   }, [cartItem])
 
   return (
+    // wrap everything w/ context so that cartItem & addToCart are avail to all child components
     <CartContext.Provider value={{ cartItem, addToCart, setCartItem }}>
       <Navbar />
       <Routes>

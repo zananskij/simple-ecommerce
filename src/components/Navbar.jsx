@@ -1,6 +1,4 @@
 import "./Navbar.css"
-
-// import LogoImg2 from "../img/newlogo2.png"
 import LogoImg2 from "../img/shopify-logo.png"
 
 import { Link } from "react-router-dom"
@@ -10,12 +8,15 @@ import EmptyCart from "./EmptyCart"
 import { CartContext } from "../pages/ProductPage"
 
 function Navbar() {
+  // states for sticky navbar, mobile navigation, and the cart
   const [sticky, setSticky] = useState(false)
   const [mobileNav, setMobileNav] = useState(false)
   const [cart, setCart] = useState(false)
 
+  // Get cartItem from the CartContext using useContext
   const { cartItem } = useContext(CartContext)
 
+  // set the navbar sticky on scroll
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setSticky(true)
@@ -24,10 +25,12 @@ function Navbar() {
     }
   }
 
+  // toggles the state of the cart open/close
   const openCart = () => {
     setCart(!cart)
   }
 
+  // event listener to the window for scroll event
   window.addEventListener("scroll", handleScroll)
 
   const scrollToTop = () => {
@@ -77,9 +80,6 @@ function Navbar() {
               <Link onClick={() => window.scrollTo(0, 0)} to="/categories/all">
                 categories
               </Link>
-              {/* <Link onClick={() => window.scrollTo(0, 0)} to="/categories/product/19">
-                product page
-              </Link> */}
               <i
                 data-array-length={cartItem.length}
                 onClick={openCart}

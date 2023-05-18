@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import "./Banner.css"
 
 function BannerReverse({ title, text, img }) {
+  // second banner flipped styling
   return (
     <div className="banner">
       <div className="container">

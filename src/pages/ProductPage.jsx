@@ -9,36 +9,46 @@ import { useParams } from "react-router"
 export const CartContext = createContext()
 
 function ProductPage() {
+  // using useParams hook to get the product id from the route parameters
   const { id } = useParams()
+  // filter the items array to get the item with the id ==== to the id from the route parameters
   const item = items.filter((item) => item.id === parseInt(id))
 
+  // quantity + image states
   const [quantity, setQuantity] = useState(1)
   const [image, setImage] = useState(item[0].img)
 
+  // getting the addToCart function from the CartContext using useContext hook
   const { addToCart } = useContext(CartContext)
 
+  // change the image when mouse is over the image
   const changeImage = (e) => {
     setImage(e.target.src)
   }
 
+  // function to increase quantity
   const increase = () => {
     if (quantity >= 1) {
       setQuantity(quantity + 1)
     }
   }
 
+  // function to decrease quantity, but not less than 1
   const decrease = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1)
     }
   }
 
+  // function to calculate the total price
   const calcPrice = (quantity) => {
     return quantity * item[0].price
   }
 
+  // state for the popup notification
   const [notify, setNotify] = useState(false)
 
+  // function to toggle the notification state
   const showNotify = () => {
     setNotify(!notify)
   }

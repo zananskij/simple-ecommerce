@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import "./Banner.css"
 
 function Banner({ title, text, img }) {
+  // first banner
   return (
     <div className="banner">
       <div className="container">

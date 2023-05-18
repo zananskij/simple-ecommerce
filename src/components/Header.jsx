@@ -6,6 +6,7 @@ import Main4 from "../img/header/home-img-4.jpg"
 import { Link } from "react-router-dom"
 
 function Header() {
+  // main header section
   return (
     <>
       <div className="home-container">

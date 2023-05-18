@@ -10,14 +10,13 @@ import Img9 from "../img/products/9.png"
 import Img10 from "../img/products/10.jpg"
 import Img11 from "../img/products/11.jpg"
 import Img12 from "../img/products/12.png"
-// import Img13 from "../img/products/13.jpg"
 import Img14 from "../img/products/14.png"
 import Img15 from "../img/products/15.jpg"
 import Img16 from "../img/products/16.jpg"
 import Img17 from "../img/products/17.png"
 import Img18 from "../img/products/18.png"
 import Img19 from "../img/products/19.jpg"
-// import Img20 from "../img/products/20r.jpg"
+import Img20 from "../img/products/20.jpg"
 import OtherImgs1 from "../img/products/otherProducts/other1.jpg"
 import OtherImgs2 from "../img/products/otherProducts/other2.jpg"
 import Toster1 from "../img/products/otherProducts/toster1.jpg"
@@ -28,12 +27,8 @@ import PulpUnit1 from "../img/products/otherProducts/pulpunit1.jpg"
 import PulpUnit2 from "../img/products/otherProducts/pulpunit2.jpg"
 import ModernGold1 from "../img/products/otherProducts/moderngold1.webp"
 import ModernGold2 from "../img/products/otherProducts/moderngold2.webp"
-// import CleaningOil1 from "../img/products/otherProducts/cleaningoil1.jpg"
-// import CleaningOil2 from "../img/products/otherProducts/cleaningoil2.jpg"
 import BlackAndWhite1 from "../img/products/otherProducts/blackandwhite1.webp"
 import BlackAndWhite2 from "../img/products/otherProducts/blackandwhite2.webp"
-// import BodyOil1 from "../img/products/otherProducts/bodyoil1.jpg"
-// import BodyOil2 from "../img/products/otherProducts/bodyoil2.jpg"
 import Shelf1 from "../img/products/otherProducts/shelf1.webp"
 import Shelf2 from "../img/products/otherProducts/shelf2.webp"
 import Vase1 from "../img/products/otherProducts/vase1.webp"
@@ -44,8 +39,6 @@ import BlackLamp1 from "../img/products/otherProducts/blacklamp1.webp"
 import BlackLamp2 from "../img/products/otherProducts/blacklamp2.jpg"
 import GoldenLamp1 from "../img/products/otherProducts/goldenlamp1.webp"
 import GoldenLamp2 from "../img/products/otherProducts/goldenlamp2.webp"
-// import Cotton1 from "../img/products/otherProducts/cotton1.jpg"
-// import Cotton2 from "../img/products/otherProducts/cotton2.jpg"
 import WoodChair1 from "../img/products/otherProducts/woodchair1.webp"
 import WoodChair2 from "../img/products/otherProducts/woodchair2.webp"
 import Copenhagen1 from "../img/products/otherProducts/copenhagen1.webp"
@@ -65,13 +58,13 @@ export const items = [
     category: "chair",
     img: Img1,
     description: "Little Armchair Sheepskin",
-    price: 986,
+    price: 499,
     otherImgs: [OtherImgs1, OtherImgs2],
     specs:
-      "Tradition Little Petra VB1 Armchair Sheepskin Moonlight/ Walnut/ Brass Limited Edition | We give you a special discount when you put this product in the basket.",
+      "With its durable soft and tradition upholstery, this Armchair Sheepskin Moonlight/ Walnut/ Brass Limited Edition | We give you a special discount when you put this product in the cart.",
     texture: "Sheep Skin",
-    weight: "15kg",
-    size: "150cm x 70cm",
+    weight: "30 lbs",
+    size: "33 x 35 in",
   },
   {
     id: 2,
@@ -81,10 +74,10 @@ export const items = [
     price: 45,
     otherImgs: [Toster1, Toster2],
     specs:
-      " The rounded square design of the toaster allows it to fit neatly against a wall, or inside a corner. Excellent at defrosting, and with the perfect breadtoheater distance to give crunchy toast with a soft, spongey middle.",
+      " The rounded square design of the toaster allows it to fit neatly against a wall, or inside a corner. Excellent at defrosting, and with the perfect bread-to-heater distance to give crunchy toast with a soft, spongey middle.",
     texture: "Plastic",
-    weight: "3.5kg",
-    size: "20xm x 10cm",
+    weight: "7 lbs",
+    size: "8 x 4 in",
   },
   {
     id: 3,
@@ -96,21 +89,21 @@ export const items = [
     specs:
       "The Verner Panton Flowerpot , designed in 1968, was originally intended for the restaurant industry and Verner Panton exhibitions.",
     texture: "Plastic",
-    weight: "2kg",
-    size: "15cm x 15cm",
+    weight: "4 lbs",
+    size: "6 x 6 in",
   },
   {
     id: 4,
     category: "storage",
     img: Img4,
-    description: "Pulp Unit - 5 Compartments",
-    price: 254,
+    description: "Shelving Unit - 5 Compartments",
+    price: 199,
     otherImgs: [PulpUnit1, PulpUnit2],
     specs:
-      "Pulp Units are lightweight and durable, and can be used horizontally or vertically. Designed with A4 paper in mind, MUJI angle files and ring binders fit neatly inside.",
+      "Our Storage Units are lightweight and durable, and can be used horizontally or vertically. Designed with A4 paper in mind, MUJI angle files and ring binders fit neatly inside.",
     texture: "Wood",
-    weight: "45kg",
-    size: "250cm x 60cm",
+    weight: "45 lbs",
+    size: "98 x 24 in",
   },
   {
     id: 5,
@@ -122,48 +115,47 @@ export const items = [
     specs:
       "Tom Dixon and FRONT have created an incredibly beautiful pendant, in a completely unique design. The lamp is made using a special metallization technology that makes the look completely unique. The first of its kind. the lamp is transparent when its on and you can see the exciting play of colors.",
     texture: "Plastic",
-    weight: "3kg",
-    size: "20cm x 20cm",
+    weight: "6 lbs",
+    size: "8 x 8 in",
   },
-
   {
     id: 7,
     category: "lamp",
     img: Img7,
     description: "Black and White Lamp",
-    price: 220,
+    price: 49,
     otherImgs: [BlackAndWhite1, BlackAndWhite2],
     specs:
       "Concept: Dot is inspired by perforated metal and the patterns that light creates when it shines through the small holes. The contrast between the coarse perforated metal and the smooth opal glass makes the Dot a simple and meaningful pendant. With its elegant expression, Shine, whether the light is on or off.",
     texture: "Plastic",
-    weight: "6kg",
-    size: "20cm x 20cm",
+    weight: "6 lbs",
+    size: "8 x 8 in",
   },
   {
     id: 8,
     category: "storage",
     img: Img8,
-    description: "Gejst Shelf A Black Ash/Black",
-    price: 115,
+    description: "Black Ash/Black Shelf ",
+    price: 99,
     otherImgs: [Shelf1, Shelf2],
     specs:
-      "Designed by Böttcher & Kayser, Nivo is a minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf.",
+      "A minimalist wall shelf designed with functionality and aesthetics in mind. Without unnecessary details and clean lines, this collection hangs easily and elegantly on the wall, creating calm and an overview of the things you want to put on the shelf.",
     texture: "Wood",
-    weight: "10kg",
-    size: "60cm x 20cm",
+    weight: "18 lbs",
+    size: "24 x 8 in",
   },
   {
     id: 9,
     category: "storage",
     img: Img9,
-    description: "Cube Lolo Vase Black",
-    price: 161,
+    description: "Vase Black",
+    price: 159,
     otherImgs: [Vase1, Vase2],
     specs:
-      "Kubus Vase Lolo was originally designed by Søren Lassen in 2014, but was launched in connection with by Lassens 10 year anniversary 2018. The vase is a natural and sought-after extension of the series, which already counts the Kubus candlesticks and Kubus Bowl Bowl. Set it alone or in a still life, fill it with airy, colorful flowers for a feminine look or leave it alone in all its simplicity and precision.",
+      "The vase is a natural and sought-after extension of the series, which already counts the Kubus candlesticks and Kubus Bowl Bowl. Set it alone or in a still life, fill it with airy, colorful flowers for a feminine look or leave it alone in all its simplicity and precision.",
     texture: "Ceramics",
-    weight: "12kg",
-    size: "45cm x 15cm",
+    weight: "12 lbs",
+    size: "17 x 6 in",
   },
   {
     id: 10,
@@ -173,36 +165,36 @@ export const items = [
     price: 89,
     otherImgs: [ChairBoom1, ChairBoom2],
     specs:
-      "Concept: &Tradition's Boomerang lounge chair is a classic Danish design with a modern and minimalist expression. The chair was designed by Hvidt & Mølgaard in 1956, and with its stylish cushions and hand-polished wooden frame, it is an ideal Nordic design that gives a personal mark to the home.",
+      "Traditional lounge chair is a classic design with a modern and minimalist expression, and with its stylish cushions and hand-polished wooden frame, it is an ideal design that gives a personal mark to the home.",
     texture: "Wood",
-    weight: "8kg",
-    size: "60cm x 40cm",
+    weight: "15 lbs",
+    size: "24 x 16 in",
   },
   {
     id: 11,
     category: "lamp",
     img: Img11,
-    description: "The Sun Pendant Black",
-    price: 160,
+    description: "The Black Pendant",
+    price: 109,
     otherImgs: [BlackLamp1, BlackLamp2],
     specs:
       "The Here Comes The Sun pendant designed by Bertrand Balas is a quality lamp with a unique and magical look. The Here Comes The Sun series has a fantastic expression and especially swhen turned on it creates a very special atmosphere in the room it hangs in. The lamp fits perfectly above both dining room table, kitchen counter, and as living room lighting . ",
     texture: "Plastic",
-    weight: "4kg",
-    size: "20cm x 20cm",
+    weight: "7 lbs",
+    size: "8 x 8 lbs",
   },
   {
     id: 12,
     category: "lamp",
     img: Img12,
     description: "Simple Golden Lamp",
-    price: 220,
+    price: 129,
     otherImgs: [GoldenLamp1, GoldenLamp2],
     specs:
-      "Verner Panton Flowerpot, designed in 1968, was originally meant for the hospitality industry and Verner Panton displays and showrooms. The lamp then became popular in private homes, and due to its stylish design and many colour choices, it has made a major comeback in recent years.",
+      "Designed in 1968, was originally meant for the hospitality industry and Verner Panton displays and showrooms. The lamp then became popular in private homes, and due to its stylish design and many colour choices, it has made a major comeback in recent years.",
     texture: "Plastic",
-    weight: "4kg",
-    size: "15cm x 15cm",
+    weight: "8 lbs",
+    size: "6 x 6 in",
   },
 
   {
@@ -210,65 +202,65 @@ export const items = [
     category: "chair",
     img: Img14,
     description: "Oak Spanish Chair",
-    price: 520,
+    price: 219,
     otherImgs: [WoodChair1, WoodChair2],
     specs:
       "When talking about Børge Mogensen, The Spanish Chair is probably one of the first designs you would think of, which makes good sense as it is also one of his most recognized products around the world.",
     texture: "Wood",
-    weight: "15kg",
-    size: "60cm x 30cm",
+    weight: "24 lbs",
+    size: "24 x 12 in",
   },
   {
     id: 15,
     category: "chair",
     img: Img15,
-    description: "Copenhagen Armchair",
-    price: 330,
+    description: "Coffee Armchair",
+    price: 249,
     otherImgs: [Copenhagen1, Copenhagen2],
     specs:
-      "Concept: The Hyg series by Danish Normann Copenhagen is a series of chairs based on the Danish word Hygge. The designer Simon Legald has tried to embody the meaning of the word around security, warmth and convenience in a furniture series. This is expression in the fine organic shapes and hearty curves that provide a high degree of sitting comfort and well-being in the chairs. ",
+      "The designer Simon Legald has tried to embody the meaning of the word around security, warmth and convenience in a furniture series. This is expression in the fine organic shapes and hearty curves that provide a high degree of sitting comfort and well-being in the chairs. ",
     texture: "Wood",
-    weight: "14kg",
-    size: "65cm x 35cm",
+    weight: "28 lbs",
+    size: "26 x 14 in",
   },
   {
     id: 16,
     category: "electronic",
     img: Img16,
-    description: "Anti Dark Light",
-    price: 120,
+    description: "Flood Light",
+    price: 124,
     otherImgs: [Cam1, Cam2],
     specs:
-      "Easy Mini W75 from Antidark lives fully up to its name. Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
+      "Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
     texture: "Metal",
-    weight: "2kg",
-    size: "15cm x 10cm",
+    weight: "5 lbs",
+    size: "6 x 4 in",
   },
   {
     id: 17,
     category: "lamp",
     img: Img17,
     description: "Table Lamp",
-    price: 75,
+    price: 65,
     otherImgs: [TableLamp1, TableLamp2],
     specs:
       "The lamp has also become popular in private homes and has especially made a comeback in recent years. This is not least due to the lamp's stylish design and the many color options that make it fit everywhere.",
     texture: "Metal",
-    weight: "5kg",
-    size: "25cm x 15cm",
+    weight: "8 lbs",
+    size: "10 x 6 in",
   },
   {
     id: 18,
     category: "lamp",
     img: Img18,
     description: "Mat Black Lamp",
-    price: 175,
+    price: 75,
     otherImgs: [MatLamp1, MatLamp2],
     specs:
       "Unique offer We give you a special discount when you put this product in the basket. *Only applies to specific products.",
     texture: "Metal",
-    weight: "6kg",
-    size: "20cm x 15cm",
+    weight: "11 lbs",
+    size: "8 x 6 in",
   },
   {
     id: 19,
@@ -278,9 +270,22 @@ export const items = [
     price: 119,
     otherImgs: [Comfy1, Comfy2],
     specs:
-      "Sum is a series designed by the Danish designer Simon Legald, who is the epitome of modern elegance. Elegant and resolute as the tip of a wing, the armrests spread out invitingly, as if they want to embrace you in the armchair's soft, homely space.",
+      "Elegant and resolute as the tip of a wing, the armrests spread out invitingly, as if they want to embrace you in the armchair's soft, homely space.",
     texture: "Comfy Material",
-    weight: "25kg",
-    size: "60cm x 30cm",
+    weight: "42 lbs",
+    size: "24 x 12 in",
+  },
+  {
+    id: 20,
+    category: "electronic",
+    img: Img20,
+    description: "Flood Light (White)",
+    price: 109,
+    otherImgs: [Cam1, Cam2],
+    specs:
+      "Simple design, comfortable light, easy to adjust. The Easy Wall Light has made it easy for the user to handle, well, everything! The Easy lamp can turn 360 degrees and be tipped. An ideal lamp that can be placed in connection with other lamps to achieve light in all corners of the room. Furthermore, the lamp can work as a wall light or ceiling",
+    texture: "Metal",
+    weight: "5 lbs",
+    size: "6 x 4 in",
   },
 ]
