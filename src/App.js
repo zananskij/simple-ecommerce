@@ -14,9 +14,44 @@ import { useEffect, useState } from "react"
 function App() {
   // cart
   const [cartItem, setCartItem] = useState([])
+  // v1
+  // const addToCart = (item) => {
 
+  //   setCartItem([...cartItem, item])
+  // }
+  // v2
+  // const addToCart = (item) => {
+  //   const existingItem = cartItem.find((i) => i.id === item.id)
+
+  //   if (existingItem) {
+  //     setCartItem(cartItem.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i)))
+  //   } else {
+  //     setCartItem([...cartItem, item])
+  //   }
+  // }
+  // v3
+  // const addToCart = (item) => {
+  //   const existingItem = cartItem.find((cartItem) => cartItem.id === item.id)
+
+  //   if (existingItem) {
+  //     setCartItem(
+  //       cartItem.map((cartItem) =>
+  //         cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+  //       )
+  //     )
+  //   } else {
+  //     setCartItem([...cartItem, { ...item, quantity: 1 }])
+  //   }
+  // }
   const addToCart = (item) => {
-    setCartItem([...cartItem, item])
+    setCartItem((prevItems) => {
+      const existingItem = prevItems.find((i) => i.id === item.id)
+      if (existingItem) {
+        return prevItems.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i))
+      } else {
+        return [...prevItems, { ...item, quantity: 1 }]
+      }
+    })
   }
 
   // local storage

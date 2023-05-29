@@ -87,7 +87,7 @@ function ProductPage() {
               <div className="atc-buy">
                 <button
                   onClick={() => {
-                    addToCart(item[0])
+                    addToCart({ ...item[0], quantity })
                     showNotify()
                   }}
                   className="atc-btn"
