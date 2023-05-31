@@ -13,24 +13,14 @@ function CartWithItems() {
     const newTotalPrice = cartItem.reduce((acc, item) => acc + item.price * item.quantity, 0)
     setTotalPrice(newTotalPrice)
   }, [cartItem])
-  // v1
-  // const newTotalPrice = cartItem.reduce((acc, item) => acc + item.price, 0)
 
   return (
     <>
       <div className="full-cart-div">
         <div className="full-cart">
-          {/* {cartItem.map((item, id) =>
-            cartItem.length !== 0 ? <CartItem key={id} item={item} setCartItem={setCartItem} /> : <EmptyCart key={id} />
-          )} */}
-          {/* keys are unique and constant for each item, regardless of its position in the array */}
-          {cartItem.map((item) =>
-            cartItem.length !== 0 ? (
-              <CartItem key={item.id} item={item} setCartItem={setCartItem} />
-            ) : (
-              <EmptyCart key={item.id} />
-            )
-          )}
+          {cartItem.map((item) => (
+            <CartItem key={item.id} item={item} setCartItem={setCartItem} />
+          ))}
         </div>
       </div>
       <div className="subtotal-div">

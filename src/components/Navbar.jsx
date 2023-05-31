@@ -2,7 +2,7 @@ import "./Navbar.css"
 import LogoImg2 from "../img/shopify-logo.png"
 
 import { Link } from "react-router-dom"
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import CartWithItems from "./CartWithItems"
 import EmptyCart from "./EmptyCart"
 import { CartContext } from "../pages/ProductPage"
@@ -16,22 +16,30 @@ function Navbar() {
   // Get cartItem from the CartContext using useContext
   const { cartItem } = useContext(CartContext)
 
-  // set the navbar sticky on scroll
-  const handleScroll = () => {
-    if (window.scrollY > 10) {
-      setSticky(true)
-    } else {
-      setSticky(false)
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setSticky(true)
+      } else {
+        setSticky(false)
+      }
     }
-  }
+
+    // Adding the event listener:
+    window.addEventListener("scroll", handleScroll)
+
+    // Returning a cleanup function to remove the event listener:
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, []) // The empty array as a second argument means this effect runs once on mount and cleanup on unmount
+
+  // v333
 
   // toggles the state of the cart open/close
   const openCart = () => {
     setCart(!cart)
   }
-
-  // event listener to the window for scroll event
-  window.addEventListener("scroll", handleScroll)
 
   const scrollToTop = () => {
     window.scrollTo({
