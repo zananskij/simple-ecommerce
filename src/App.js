@@ -15,17 +15,35 @@ import { useEffect, useState } from "react"
 function App() {
   // cart
   const [cartItem, setCartItem] = useState([])
+  const [cart, setCart] = useState(false)
 
+  // const addToCart = (newItem) => {
+  //   setCartItem((prevItems) => {
+  //     const existingItem = prevItems.find((item) => item.id === newItem.id)
+
+  //     if (existingItem) {
+  //       // If the item is already in the cart, increase the quantity
+  //       return prevItems.map((item) =>
+  //         item.id === newItem.id ? { ...item, quantity: item.quantity + newItem.quantity } : item
+  //       )
+  //     } else {
+  //       // If the item is not in the cart, add it
+  //       return [...prevItems, { ...newItem, quantity: 1 }]
+  //     }
+  //   })
+  // }
   const addToCart = (newItem) => {
     setCartItem((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === newItem.id)
 
       if (existingItem) {
-        // If the item is already in the cart, increase the quantity
-        return prevItems.map((item) => (item.id === newItem.id ? { ...item, quantity: item.quantity + 1 } : item))
+        // If the item is already in the cart, increase the quantity by the newItem quantity
+        return prevItems.map((item) =>
+          item.id === newItem.id ? { ...item, quantity: item.quantity + newItem.quantity } : item
+        )
       } else {
-        // If the item is not in the cart, add it
-        return [...prevItems, { ...newItem, quantity: 1 }]
+        // If the item is not in the cart, add it with its quantity
+        return [...prevItems, newItem]
       }
     })
   }
@@ -48,7 +66,8 @@ function App() {
 
   return (
     // wrap everything w/ context so that cartItem & addToCart are avail to all child components
-    <CartContext.Provider value={{ cartItem, addToCart, setCartItem }}>
+    // <CartContext.Provider value={{ cartItem, addToCart, setCartItem }}>
+    <CartContext.Provider value={{ cartItem, addToCart, setCartItem, cart, setCart }}>
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />

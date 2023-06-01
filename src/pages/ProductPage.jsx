@@ -5,6 +5,7 @@ import TrendingSlider from "../components/TrendingSlider"
 import Newsletter from "../components/Newsletter"
 import Footer from "../components/Footer"
 import { useParams } from "react-router"
+import { Link } from "react-router-dom"
 
 export const CartContext = createContext()
 
@@ -20,6 +21,8 @@ function ProductPage() {
 
   // getting the addToCart function from the CartContext using useContext hook
   const { addToCart } = useContext(CartContext)
+
+  const { setCart } = useContext(CartContext)
 
   // change the image when mouse is over the image
   const changeImage = (e) => {
@@ -53,6 +56,12 @@ function ProductPage() {
     setNotify(!notify)
   }
 
+  const [btnName, setBtnName] = useState("All")
+
+  const handleBtnName = (e) => {
+    setBtnName(e)
+  }
+
   return (
     <>
       <div onAnimationEnd={() => setNotify(false)} className={`notify ${notify ? "slide-in" : ""}`}>
@@ -60,6 +69,11 @@ function ProductPage() {
       </div>
 
       <div className="product-page-div">
+        <div className="product-home">
+          <Link onClick={() => window.scrollTo(0, 0)} to="/">
+            <i className="fa-solid fa-angle-left"></i> Home
+          </Link>
+        </div>
         <div className="container">
           <div className="product-div">
             <h3 className="product-big-name">{item[0].description}</h3>
@@ -94,7 +108,9 @@ function ProductPage() {
                 >
                   add to cart
                 </button>
-                <button className="buy-btn">buy now</button>
+                <button className="buy-btn" onClick={() => setCart(true)}>
+                  View Cart
+                </button>
               </div>
             </div>
           </div>

@@ -11,10 +11,9 @@ function Navbar() {
   // states for sticky navbar, mobile navigation, and the cart
   const [sticky, setSticky] = useState(false)
   const [mobileNav, setMobileNav] = useState(false)
-  const [cart, setCart] = useState(false)
 
-  // Get cartItem from the CartContext using useContext
-  const { cartItem } = useContext(CartContext)
+  // Get cartItem, cart, setCart from the CartContext using useContext
+  const { cartItem, cart, setCart } = useContext(CartContext)
 
   useEffect(() => {
     const handleScroll = () => {

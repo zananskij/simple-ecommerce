@@ -205,6 +205,22 @@
   animation-fill-mode: forwards;
 }
 
+.product-home {
+  margin-bottom: 3rem;
+}
+
+.product-home a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: black;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.checkout-btn {
+  padding: 1rem;
+}
+
 @keyframes slidein {
   0% {
     top: -100%;
