@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Categories from "./pages/Categories"
+import Success from "./pages/Success"
 import All from "./components/Categories-pages/All"
 import Storage from "./components/Categories-pages/Storage"
 import Electronics from "./components/Categories-pages/Electronics"
@@ -51,7 +52,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-
         <Route path="categories" element={<Categories />}>
           <Route path="all" element={<All />} />
           <Route path="storage" element={<Storage />} />
@@ -61,6 +61,7 @@ function App() {
           <Route path="chairs" element={<Chairs />} />
         </Route>
         <Route path="categories/product/:id" element={<ProductPage />} />
+        <Route path="success" element={<Success />} />
       </Routes>
     </CartContext.Provider>
   )

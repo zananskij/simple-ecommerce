@@ -22,3 +22,8 @@ html {
   margin: 0 auto;
   padding: 0 19px;
 }
+
+.success-page {
+  padding-top: 15rem;
+  padding-left: 8rem;
+}

@@ -56,8 +56,28 @@ function CartWithItems() {
     setTotalPrice(newTotalPrice)
   }, [cartItem])
 
+  // async function handleCheckout() {
+  //   const response = await fetch("http://localhost:4242/create-payment-intent", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ items: cartItem }),
+  //   })
+
+  //   const { clientSecret } = await response.json()
+
+  //   const stripe = await stripePromise
+  //   const { error } = await stripe.redirectToCheckout({
+  //     sessionId: clientSecret,
+  //   })
+
+  //   if (error) {
+  //     console.warn("Error:", error)
+  //   }
+  // }
   async function handleCheckout() {
-    const response = await fetch("http://localhost:4242/create-payment-intent", {
+    const response = await fetch("http://localhost:4242/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,11 +85,11 @@ function CartWithItems() {
       body: JSON.stringify({ items: cartItem }),
     })
 
-    const { clientSecret } = await response.json()
+    const { sessionId } = await response.json()
 
     const stripe = await stripePromise
     const { error } = await stripe.redirectToCheckout({
-      sessionId: clientSecret,
+      sessionId,
     })
 
     if (error) {
