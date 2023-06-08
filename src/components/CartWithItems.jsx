@@ -18,7 +18,7 @@ function CartWithItems() {
   }, [cartItem])
 
   async function handleCheckout() {
-    const response = await fetch("http://localhost:4242/create-checkout-session", {
+    const response = await fetch("https://simple-ecommerce-server.herokuapp.com/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
