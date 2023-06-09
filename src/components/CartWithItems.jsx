@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import CartItem from "./CartItem"
 import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../pages/ProductPage"
-import EmptyCart from "./EmptyCart"
+// import EmptyCart from "./EmptyCart"
 import { loadStripe } from "@stripe/stripe-js"
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)

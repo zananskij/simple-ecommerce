@@ -56,11 +56,12 @@ function ProductPage() {
     setNotify(!notify)
   }
 
-  const [btnName, setBtnName] = useState("All")
+  // WAS CAUSING HEROKU ERROR IN LOGS
+  // const [btnName, setBtnName] = useState("All")
 
-  const handleBtnName = (e) => {
-    setBtnName(e)
-  }
+  // const handleBtnName = (e) => {
+  //   setBtnName(e)
+  // }
 
   return (
     <>
