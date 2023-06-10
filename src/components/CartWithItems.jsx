@@ -19,6 +19,7 @@ function CartWithItems() {
 
   async function handleCheckout() {
     const response = await fetch("https://simple-ecommerce-server.herokuapp.com/create-checkout-session", {
+      // const response = await fetch("http://localhost:4242/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,15 +27,20 @@ function CartWithItems() {
       body: JSON.stringify({ items: cartItem }),
     })
 
-    const { sessionId } = await response.json()
+    if (!response.ok) {
+      // handle error
+      console.error(`HTTP error! status: ${response.status}`)
+    } else {
+      const { sessionId } = await response.json()
 
-    const stripe = await stripePromise
-    const { error } = await stripe.redirectToCheckout({
-      sessionId,
-    })
+      const stripe = await stripePromise
+      const { error } = await stripe.redirectToCheckout({
+        sessionId,
+      })
 
-    if (error) {
-      console.warn("Error:", error)
+      if (error) {
+        console.warn("Error:", error)
+      }
     }
   }
 
