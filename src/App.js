@@ -17,21 +17,6 @@ function App() {
   const [cartItem, setCartItem] = useState([])
   const [cart, setCart] = useState(false)
 
-  // const addToCart = (newItem) => {
-  //   setCartItem((prevItems) => {
-  //     const existingItem = prevItems.find((item) => item.id === newItem.id)
-
-  //     if (existingItem) {
-  //       // If the item is already in the cart, increase the quantity
-  //       return prevItems.map((item) =>
-  //         item.id === newItem.id ? { ...item, quantity: item.quantity + newItem.quantity } : item
-  //       )
-  //     } else {
-  //       // If the item is not in the cart, add it
-  //       return [...prevItems, { ...newItem, quantity: 1 }]
-  //     }
-  //   })
-  // }
   const addToCart = (newItem) => {
     setCartItem((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === newItem.id)
