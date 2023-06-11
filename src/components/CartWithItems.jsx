@@ -28,7 +28,7 @@ function CartWithItems() {
     })
 
     if (!response.ok) {
-      // handle error
+      // handle errorr
       console.error(`HTTP error! status: ${response.status}`)
     } else {
       const { sessionId } = await response.json()
