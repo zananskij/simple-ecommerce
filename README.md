@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the frontend code for my Simple Ecommerce project. The frontend is built using React build a dynamic user interface. Using react's component-based architecture to create reusable UI components and manage application state effectively. Axios is used for making API requests to the backend server, enabling seamless communication between the frontend and backend. The Stripe API integration allows for secure payment processing and handling.
+This repository contains the frontend code for my Simple Ecommerce project, offering a seamless online shopping experience. The app provides a range of features designed to enhance usability and facilitate secure transactions. Users can explore a dynamic user interface built with React, leveraging its component-based architecture for reusable UI components and efficient state management. The frontend communicates with the backend server using Axios, ensuring seamless data transfer and real-time updates. The integration of the Stripe API allows for secure payment processing and handling at checkout!
 
 ## Deployed Link
 
@@ -11,7 +11,6 @@ https://simple-ecommerce.herokuapp.com/
 ## Skills Utilized
 
 - React
-- React Router
 - Axios
 - Stripe API Integration
 - State Management
@@ -26,6 +25,7 @@ https://simple-ecommerce.herokuapp.com/
 - Cart Functionality: Allows users to add/remove products to their cart, view the cart, and proceed to checkout.
 - Payment Processing: Utilizes the Stripe API to securely process payments and complete transactions.
 - Local Storage: Persists cart items in the browser's local storage, ensuring a seamless user experience across sessions.
+- Mobile Responsiveness: Ensures seamless, responsive UI across different device sizes.
 
 ## Contact me!
 
