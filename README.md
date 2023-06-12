@@ -8,7 +8,7 @@ This repository contains the frontend code for my Simple Ecommerce project, offe
 
 https://simple-ecommerce.herokuapp.com/
 
-## Skills Utilized
+## Skills Utilized:
 
 - React
 - Axios
@@ -17,7 +17,7 @@ https://simple-ecommerce.herokuapp.com/
 - Local Storage
 - CSS
 
-## Key Features
+## Key Features:
 
 - Home Page: Provides an intuitive and user-friendly interface for browsing and exploring products.
 - Categories: Organizes products into different categories for easy navigation and discovery.
